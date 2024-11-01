@@ -1,0 +1,144 @@
+# 压力测试日志
+
+5000客户端 5秒 proactor/LT
+Speed=1394172 pages/min, 3694556 bytes/sec.
+Requests: 116181 susceed, 0 failed.
+
+5000客户端 5秒 proactor/真ET listen=128
+Speed=1403772 pages/min, 3719964 bytes/sec.
+Requests: 116981 susceed, 0 failed.
+
+5000客户端 5秒 proactor/真ET listen=1024 线程数量=8
+Speed=1317276 pages/min, 3490686 bytes/sec.
+Requests: 109773 susceed, 0 failed.
+
+5000客户端 5秒 proactor/真ET listen=1024 线程数量=12
+Speed=1368792 pages/min, 3627203 bytes/sec.
+Requests: 114066 susceed, 0 failed.
+
+5000客户端 5秒 proactor/真ET listen=1024 线程数量=16
+Speed=1357476 pages/min, 3597248 bytes/sec.
+Requests: 113123 susceed, 0 failed.
+
+8000客户端 5秒 proactor/真ET listen=1024 线程数量=16
+Speed=1249260 pages/min, 3310507 bytes/sec.
+Requests: 104105 susceed, 0 failed.
+
+9000客户端 5秒 proactor/真ET listen=1024 线程数量=16
+Speed=1197012 pages/min, 3171922 bytes/sec.
+Requests: 99751 susceed, 0 failed.
+
+9500客户端 5秒 proactor/真ET listen=1024 线程数量=16 最大请求15000
+Speed=1189944 pages/min, 3153256 bytes/sec.
+Requests: 99162 susceed, 0 failed.
+
+5000客户端 5秒 proactor/真ET listen=1024 线程数量=16 最大请求15000
+Speed=1284516 pages/min, 3403872 bytes/sec.
+Requests: 107043 susceed, 0 failed.
+
+5000客户端 5秒 proactor/真ET listen=128 线程数量=8 最大请求10000 最大监听15000
+Speed=1340964 pages/min, 3553491 bytes/sec.
+Requests: 111747 susceed, 0 failed.
+
+5000客户端 5秒 proactor/ET listen=1024 线程数量=16 最大请求15000 最大监听15000
+Speed=1355364 pages/min, 3591714 bytes/sec.
+Requests: 112947 susceed, 0 failed.
+
+5000客户端 5秒 proactor/LT listen=1024 线程数量=16 最大请求15000 最大监听15000
+Speed=1359996 pages/min, 3603957 bytes/sec.
+Requests: 113333 susceed, 0 failed.
+
+5000客户端 10秒 proactor/LT listen=1024 线程数量=16 最大请求15000 最大监听15000 epoll_create=999
+Speed=1308714 pages/min, 3468108 bytes/sec.
+Requests: 218119 susceed, 0 failed.
+
+5000客户端 10秒 proactor/ET listen=1024 线程数量=16 最大请求15000 最大监听15000 epoll_create=999 ./test_et_16
+Speed=1515216 pages/min, 4015322 bytes/sec.
+Requests: 252536 susceed, 0 failed.
+
+9000客户端 15秒 proactor/LT listen=1024 线程数量=16 最大请求15000 最大监听15000 epoll_create=999 ./test
+Speed=1515716 pages/min, 4016594 bytes/sec.
+Requests: 378925 susceed, 4 failed.
+
+9000客户端 10秒 proactor/ET listen=1024 线程数量=8 最大请求15000 最大监听15000 epoll_create=999 ./test_et
+Speed=1795536 pages/min, 4758123 bytes/sec.
+Requests: 299256 susceed, 0 failed.
+
+9500客户端 10秒 proactor/ET listen=1024 线程数量=8 最大请求15000 最大监听15000 epoll_create=999 ./test_et
+Speed=1523268 pages/min, 4036628 bytes/sec.
+Requests: 253878 susceed, 0 failed.
+
+9800客户端 10秒 proactor/ET listen=1024 线程数量=8 最大请求15000 最大监听15000 epoll_create=999 ./test_et
+Speed=1519194 pages/min, 4025832 bytes/sec.
+Requests: 253199 susceed, 0 failed.
+
+9800客户端 10秒 proactor/ET listen=1024 线程数量=12 最大请求15000 最大监听15000 epoll_create=999 ./test_et_12
+Speed=1525698 pages/min, 4043084 bytes/sec.
+Requests: 254283 susceed, 0 failed.
+
+9000客户端 15秒 proactor/ET listen=1024 线程数量=8 最大请求15000 最大监听15000 epoll_create=999 ./test_et
+Speed=1585280 pages/min, 4200833 bytes/sec.
+Requests: 396305 susceed, 15 failed.
+
+
+9500客户端 10秒 proactor/ET listen=1024 线程数量=16 最大请求15000 最大监听15000 epoll_create=999 ./test_et_16
+Speed=1457286 pages/min, 3861808 bytes/sec.
+Requests: 242881 susceed, 0 failed.
+
+9000客户端 15秒 proactor/ET listen=1024 线程数量=16 最大请求15000 最大监听15000 epoll_create=999 ./test_et_16
+Speed=1527024 pages/min, 4046634 bytes/sec.
+Requests: 381756 susceed, 0 failed.
+
+10000客户端 5秒 proactor/LT listen=1024 线程数量=16 最大请求15000 最大监听15000 epoll_create=999 ./test
+10000 clients, running 5 sec.
+problems forking worker no. 9892
+fork failed.: Resource temporarily unavailable
+
+10000客户端 5秒 proactor/ET listen=1024 线程数量=16 最大请求15000 最大监听15000 epoll_create=999 ./test_et_16
+10000 clients, running 5 sec.
+problems forking worker no. 9889
+fork failed.: Resource temporarily unavailable
+
+最优性能：  最大服务器数量9900左右，页面数量150w 个/分，400w 比特/秒，RPS 15000+ 每秒的查询次数 
+
+
+加入定时器，LT模式，定时器间隔5秒
+2000 clients, running 20 sec.
+Speed=2417919 pages/min, 640046 bytes/sec.
+Requests: 80509 susceed, 725464 failed.
+
+加入定时器，LT模式，定时器间隔3秒
+2000 clients, running 20 sec.
+Speed=379455 pages/min, 1005285 bytes/sec.
+Requests: 126477 susceed, 8 failed.
+
+加入定时器，LT模式，定时器间隔3秒
+5000 clients, running 10 sec.
+Speed=393150 pages/min, 1041847 bytes/sec.
+Requests: 65525 susceed, 0 failed.
+
+加入定时器，LT模式，定时器间隔3秒
+5000 clients, running 15 sec.
+Speed=418752 pages/min, 1104880 bytes/sec.
+Requests: 104247 susceed, 441 failed.
+
+加入定时器，LT模式，定时器间隔3秒
+9000 clients, running 15 sec.
+Speed=405548 pages/min, 1072836 bytes/sec.
+Requests: 101224 susceed, 163 failed.
+
+加入定时器，LT模式，定时器间隔3秒
+10000 clients, running 10 sec.
+problems forking worker no. 9892
+fork failed.: Resource temporarily unavailable
+
+加入定时器，ET模式，定时器间隔3秒
+5000 clients, running 15 sec.
+Speed=414692 pages/min, 1093941 bytes/sec.
+Requests: 103216 susceed, 457 failed.
+
+加入定时器，ET模式，定时器间隔3秒
+9000 clients, running 15 sec.
+Speed=412056 pages/min, 1085270 bytes/sec.
+Requests: 102391 susceed, 623 failed.
+

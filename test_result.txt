@@ -1,0 +1,90 @@
+
+// 功能不全版
+9500客户端 10秒 proactor/ET listen=1024 线程数量=8 最大请求15000 最大监听15000 epoll_create=999 ./test_et
+Speed=1523268 pages/min, 4036628 bytes/sec.
+Requests: 253878 susceed, 0 failed.
+
+
+// ----------------增加日志系统，定时器，连接数据库，支持POST请求-------------------
+
+9500客户端 10秒 日志关 数据库开 小根堆定时器 时间间隔=5s
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=1588932 pages/min, 4210669 bytes/sec.
+Requests: 264822 susceed, 0 failed.
+
+9500客户端 10秒 同步日志 数据库开 小根堆定时器 时间间隔=5s
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=729810 pages/min, 1933980 bytes/sec.
+Requests: 121635 susceed, 0 failed.
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s  阻塞队列大小=8
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=500586 pages/min, 1326537 bytes/sec.
+Requests: 83431 susceed, 0 failed.
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s  阻塞队列大小=100
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=561258 pages/min, 1487333 bytes/sec.
+Requests: 93543 susceed, 0 failed. 日志大小：28m
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s  阻塞队列大小=200
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=556656 pages/min, 1475138 bytes/sec.
+Requests: 92776 susceed, 0 failed.
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s  阻塞队列大小=1000
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=538542 pages/min, 1427136 bytes/sec.
+Requests: 89757 susceed, 0 failed. 日志大小：27.3
+
+
+
+
+// ------------------定时器改成延迟删除+智能指针，优化后-----------http连接类还是用的数组存储
+
+9500客户端 10秒 日志关 数据库开 小根堆定时器 时间间隔=5s
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=1768764 pages/min, 4687065 bytes/sec.
+Requests: 294786 susceed, 8 failed.
+
+9500客户端 10秒 同步日志 数据库开 小根堆定时器 时间间隔=5s
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=1022700 pages/min, 2709964 bytes/sec.
+Requests: 170439 susceed, 11 failed.   日志大小：37.9
+
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s 日志列队大小=100/50
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=777336 pages/min, 2059892 bytes/sec.
+Requests: 129553 susceed, 3 failed.  日志大小：28.84
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s 日志列队大小=8
+Speed=760770 pages/min, 2015976 bytes/sec.
+Requests: 126795 susceed, 0 failed.
+
+
+// -----------------定时器解决内存泄漏，循环引用等问题，http连接类，定时器类都用智能指针管理-------------------
+
+9500客户端 10秒 关日志 数据库开 小根堆定时器 时间间隔=5s
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=1757814 pages/min, 4658159 bytes/sec.
+Requests: 292969 susceed, 0 failed.
+
+
+9500客户端 10秒 同步日志 数据库开 小根堆定时器 时间间隔=5s
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=1191188 pages/min, 3421584 bytes/sec.
+Requests: 175198 susceed, 0 failed.
+
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s 日志列队大小=100
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=775578 pages/min, 2055250 bytes/sec.
+Requests: 129263 susceed, 0 failed.
+
+9500客户端 10秒 异步日志 数据库开 小根堆定时器 时间间隔=5s 日志列队大小=200
+proactor/ET 非阻塞I/O lfd=LT cfd=ET 线程数量=8 最大请求15000 最大监听15000 listen=1024 epoll_create=999 ./server
+Speed=801036 pages/min, 2122745 bytes/sec.
+Requests: 133506 susceed, 0 failed.
+
+总结------------
