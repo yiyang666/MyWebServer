@@ -131,11 +131,10 @@ int main(int argc, char *argv[])
     //http_conn *users=new http_conn[MAX_FD];
     // std::vector<http_conn> users;
     // users.reserve(MAX_FD);
-    // 创建一个week智能指针数组来管理每一个连接对象
-    SPHttp users[65535]; //并没有初始化，指针指向空
-    //users.reserve(MAX_FD);
+    // 创建一个智能指针数组来管理每一个连接对象
+    SPHttp users[MAX_FD]; //初始化，每个指针都指向空
 
-    //  初始化数据库读取表
+    //  初始化数据库表
     users[0]->initmysql_table(connPool);
 
     // 创建监听套接字
@@ -149,7 +148,7 @@ int main(int argc, char *argv[])
     int opt=1;
     setsockopt(listenfd,SOL_SOCKET,SO_REUSEPORT,&opt,sizeof(opt));
 
-    // 绑定
+    // 绑定服务器ip和端口
     struct sockaddr_in address;
     memset(&address,0,sizeof(address));
     address.sin_family=AF_INET;
@@ -216,11 +215,14 @@ int main(int argc, char *argv[])
                     LOG_WARN("%s", "Internal server busy！");
                     continue;
                 }
-                // 1.先判断智能指针管理的对象空间是被销毁，
-                //   1.1如果不存在：初始化一个连接对象，交给它管理。正式初始化，同时创建定时器。
-                //   1.2如果存在：说明当前管理的这个对象已经被初始化了，只需要更新它的值，2.再判断weekptr指向的定时器是否还在
-                    //  2.1 还在，说明这个定时器还未超时，只是当前连接被断开了，更新定时器的超时时间即可
-                    //  X2.2 不在了，不存在这种情况，因为超时要把定时器删除的同时（reset），把这个连接对象也删除，防止继续占用内存空间
+                /*
+                1.先判断智能指针管理的连接对象是否被销毁，
+                  1.1如果不存在：初始化一个连接对象，交给它管理。正式初始化，同时创建定时器。
+                  1.2如果存在：说明当前管理的这个对象已经被初始化了，此时只需要更新它的值
+                    2.再判断weekptr指向的定时器是否还在
+                     2.1 还在，说明这个定时器还未超时，只是当前连接被断开了，更新定时器的超时时间即可
+                     X2.2 不在了，不存在这种情况，因为超时要把定时器删除的同时（析构），把这个连接对象reset掉，防止继续占用内存空间
+                */
                 if (users[connfd].get()==nullptr)
                 {
                     // 让这个shared智能指针指向一个连接类的对象空间（腾出一块内存，把对象放进去，shared_ptr负责管理它）
@@ -240,7 +242,7 @@ int main(int argc, char *argv[])
                 {
                     users[connfd]->init(connfd, client_address);    // 重新初始化该连接对象
                     users[connfd]->timer.lock()->upadte(3*TIMESLOT); // 更新该连接对象的定时器
-                    //LOG_INFO("Reconnecting to a new client(%s) cfd(%d) ", inet_ntoa(client_address.sin_addr),connfd);
+                    LOG_INFO("Reconnecting to a new client(%s) cfd(%d) ", inet_ntoa(client_address.sin_addr),connfd);
                 }
             
             }
