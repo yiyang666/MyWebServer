@@ -5,10 +5,10 @@
 #include <vector>
 #include <queue>
 #include <memory>
-#include <functional>   // 管理回调函数
 #include <arpa/inet.h>  
 #include <time.h>
 #include <chrono>
+
 #include"../http/http_conn.h"
 
 #define TIMESLOT 5  //时间间隔，每次请求延长超时间为此间隔的三倍
@@ -32,7 +32,6 @@ public:
     // 构造函数，初始化参数列表
     timer_node(int ns);
     // 指向定时器的sharedptr被列队pop后，引用计数为0，定时器会调用析构函数
-    // 指向定时器的sharedptr被列队pop后，引用计数为0，定时器会调用析构函数
     ~timer_node();
     // 删除标记，用来区分资源回收方式
     void setdeleted() { deleted_ = true; }
@@ -45,20 +44,13 @@ public:
     void upadte(int ns) { this->expire_ = Clock::now() + SEC(ns); }
     // 获取超时时间
     time_p getExpire() const { return this->expire_; }
-    // 更新超时时间
-    void upadte(int ns) { this->expire_ = Clock::now() + SEC(ns); }
-    // 获取超时时间
-    time_p getExpire() const { return this->expire_; }
 
 public:
-    // 绑定连接对象，弱引用，防止循环引用
-    std::weak_ptr<http_conn> user_data; 
     // 绑定连接对象，弱引用，防止循环引用
     std::weak_ptr<http_conn> user_data; 
     
 private:
     time_p expire_;     // 超时时间
-    bool deleted_;      // 删除标记
     bool deleted_;      // 删除标记
 };
 
@@ -76,10 +68,6 @@ public:
     timerQueue();
     ~timerQueue();
 
-    // 添加定时器，返回这个定时器
-    SPTNode add_timer(int ns);
-    // 心搏函数,根据定时器超时时间，清理超时连接
-    void tick();
     // 添加定时器，返回这个定时器
     SPTNode add_timer(int ns);
     // 心搏函数,根据定时器超时时间，清理超时连接

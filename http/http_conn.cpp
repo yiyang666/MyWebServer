@@ -12,26 +12,22 @@ const char* error_500_title = "Internal Error";
 const char* error_500_form = "There was an unusual problem serving the requested file.\n";
 
 // 网站的根目录
-const char* doc_root = "/home/young/workspace/c++_work/webserver_all/MyWeb/myroot";
-
-//将表中的用户名和密码放入map
-map<string, string> http_conn::user_table={};
-locker http_conn::m_lock=locker();
+const char* doc_root = "/home/young/workspace/c++_work/webserver_all/MyWebServer/myroot";
 
 // 初始化静态成员变量
-int http_conn::m_user_count = 0;// 客户数量
+int http_conn::m_user_count = 0;
 int http_conn::m_epollfd = -1;
 sql_conn_pool *http_conn::m_connPool=nullptr;
+map<string, string> http_conn::user_table={};
+locker http_conn::m_lock=locker();
 std::unique_ptr<SPHttp[]> http_conn::users=nullptr;
 
 // 初始化数据库数据到本地
-void http_conn::initmysql_table()
 void http_conn::initmysql_table()
 {
     // 取出一个mysql连接
     MYSQL *mysql = nullptr;
     // 通过RAII机制管理mysql的生存周期
-    connectionRAII mysqlcon(&mysql, m_connPool);
     connectionRAII mysqlcon(&mysql, m_connPool);
 
     // 在user表中检索username，passwd数据，浏览器端输入
@@ -108,13 +104,13 @@ void modfd(int epollfd, int fd, int ev) {
         (2)读写错误，错误信号，客户端主动关闭以及短连接请求数据读完了，
             断开连接，标记删除，给予2*TIMERSHOT的容忍时间
 */
-//释放连接对象，清理数组空间，同时定时器也同时被删除
+// 释放连接对象，清理数组空间，同时定时器也同时被删除
 void http_conn::release_conn()
 {
     LOG_INFO("Release client(%s) cfd(%d)connection and its timer......",inet_ntoa(m_address.sin_addr), m_sockfd);
     
     if(users[m_sockfd])
-        users[m_sockfd].reset(); // 引用计数减为0，
+        users[m_sockfd].reset(); // 引用计数减为0，释放资源
 }
 // 断开连接+标记删除+更新容忍时间
 void http_conn::close_conn() 
@@ -125,7 +121,6 @@ void http_conn::close_conn()
     // 统一标记删除，更新容忍时间2*TIMESHOT
     timer.lock()->setdeleted();
     timer.lock()->upadte(2 * TIMESLOT);
-
 }
 
 // 初始化连接,外部调用初始化套接字地址
@@ -746,7 +741,6 @@ void http_conn::process() {
     if ( !write_ret ) {
         close_conn();
         LOG_ERROR("Write error in client(%s) cfd(%d)", inet_ntoa(m_address.sin_addr),m_sockfd);
-
     }
     modfd( m_epollfd, m_sockfd, EPOLLOUT);
 }

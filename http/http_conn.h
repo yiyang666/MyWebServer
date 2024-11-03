@@ -18,7 +18,6 @@
 #include <string>
 #include <sys/uio.h>
 #include <iostream>
-
 #include <map>
 #include <mysql/mysql.h>
 #include <fstream>
@@ -112,16 +111,17 @@ private:
     bool add_blank_line();
 
 public:
-    static int m_epollfd;  //所有套接字的事件都被注册到同一个epoll对象中
-    static int m_user_count; // 统计用户的数量
+    static int m_epollfd;             //所有套接字的事件都被注册到同一个epoll对象中
+    static int m_user_count;          // 统计用户的数量
     static sql_conn_pool *m_connPool; //连接池实例
 
-    static map<string, string> user_table;// 静态数据库表
-    static locker m_lock;// 静态锁
-
-    static std::unique_ptr<SPHttp[]> users; // unique指针管理的静态指针数组
-
-    std::weak_ptr<timer_node> timer; // weekptr管理定时器，给每个客户端绑定一个定时器（week防止循环引用）
+    static map<string, string> user_table;  // 静态数据库表
+    static locker m_lock;                   // 静态锁
+    
+    // unique指针管理的静态指针数组
+    static std::unique_ptr<SPHttp[]> users; 
+    // weekptr管理定时器，给每个客户端绑定一个定时器（week防止循环引用）
+    std::weak_ptr<timer_node> timer;        
 
 private:
     int m_sockfd; //该HTTP连接的socket

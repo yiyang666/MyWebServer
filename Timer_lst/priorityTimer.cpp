@@ -33,7 +33,7 @@ SPTNode timerQueue::add_timer(int ns)
 void timerQueue::tick() {
     while (!timer_queue.empty())
     {
-        // 临时的sharedptr在作用域外会自动销毁，引用计数先+1后-1
+        // 临时的sharedptr会在作用域外自动销毁，引用计数先+1后-1
         SPTNode temp_timer = timer_queue.top(); 
         SPHttp temp_conn = temp_timer->user_data.lock();
 

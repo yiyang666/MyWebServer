@@ -128,15 +128,15 @@ int main(int argc, char *argv[])
         exit(-1);
     }
     
-    //http_conn *users=new http_conn[MAX_FD];// 静态数组法
-    // std::vector<http_conn> users;// vector版本
+    // V1：http_conn *users=new http_conn[MAX_FD];// 静态数组法
+    // V2：std::vector<http_conn> users;// vector版本
     // users.reserve(MAX_FD);
-    // 创建一个week智能指针数组来管理每一个连接对象
-    //SPHttp users[MAX_FD]; //并没有初始化，指针指向空
-    // 智能指针数组和一个指向该数组的unique指针
+    // V3：创建一个week智能指针数组来管理每一个连接对象
+    //  SPHttp users[MAX_FD]; //并没有初始化，指针指向空
+    // V4：智能指针数组和一个指向该数组的unique指针
     http_conn::users = std::make_unique<SPHttp[]>(MAX_FD);
 
-    //  初始化数据库静态表
+    //  静态方法初始化数据库静态表
     http_conn::initmysql_table();
 
     // 创建监听套接字
@@ -176,9 +176,6 @@ int main(int argc, char *argv[])
     assert(ret!=-1);
     setnonblocking(pipefd[1]);
     addfd(epfd,pipefd[0],false);
-
-    // 创建客户端信息数组，里面包含定时器，每错，就是定时器套娃结构
-    //client_data* client_users=new client_data[MAX_FD];
 
     alarm(TIMESLOT);
     bool timeout=false;
