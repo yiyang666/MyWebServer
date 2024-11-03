@@ -1,7 +1,7 @@
 # 指定编译器
 CC = g++
 # 指定编译选项
-CFLAGS = -std=c++11 -g# #-Wall-O2   
+CFLAGS = -std=c++14 -g# #-Wall -O2 
 # 目标文件
 TARGET = server
 # 源文件列表

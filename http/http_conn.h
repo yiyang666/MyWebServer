@@ -29,6 +29,9 @@
 #include "../Timer_lst/priorityTimer.h"
 
 class timer_node;
+class http_conn;
+// 给管理连接对象的sharedptr起的别名
+using SPHttp = std::shared_ptr<http_conn>;
 
 class http_conn
 {
@@ -73,13 +76,15 @@ public:
 
 public:
     void init(int sockfd,const sockaddr_in &addr); // 初始化新接收的连接
-    void close_conn(bool real_close); // 关闭连接
-    bool read(); // 非阻塞的读
+    void close_conn();  // 关闭连接
+    void release_conn();     // 释放连接
+    bool read();  // 非阻塞的读
     bool write(); //非阻塞的写
     void process(); // 处理客户端的请求
     sockaddr_in *get_address() { return &m_address; } // 返回通信的socket地址
+    int get_sockfd() { return m_sockfd; } // 返回当前的通信描述符
 
-    void initmysql_table(sql_conn_pool *connPool);
+    static void initmysql_table();// 初始化我的数据库表
 
 private:
     void init(); // 初始化请求处理相关信息
@@ -110,6 +115,11 @@ public:
     static int m_epollfd;  //所有套接字的事件都被注册到同一个epoll对象中
     static int m_user_count; // 统计用户的数量
     static sql_conn_pool *m_connPool; //连接池实例
+
+    static map<string, string> user_table;// 静态数据库表
+    static locker m_lock;// 静态锁
+
+    static std::unique_ptr<SPHttp[]> users; // unique指针管理的静态指针数组
 
     std::weak_ptr<timer_node> timer; // weekptr管理定时器，给每个客户端绑定一个定时器（week防止循环引用）
 

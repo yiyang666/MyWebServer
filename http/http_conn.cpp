@@ -1,6 +1,5 @@
 #include "http_conn.h"
 
-
 // 定义HTTP响应的一些状态信息
 const char* ok_200_title = "OK";
 const char* error_400_title = "Bad Request";
@@ -13,34 +12,32 @@ const char* error_500_title = "Internal Error";
 const char* error_500_form = "There was an unusual problem serving the requested file.\n";
 
 // 网站的根目录
-const char* doc_root = "/home/young/workspace/c++_work/MyWebServer/root";
-// const char* doc_root = "/home/young/workspace/c++_work/MyWebServer/_resources";
+const char* doc_root = "/home/young/workspace/c++_work/webserver_all/MyWeb/myroot";
 
 //将表中的用户名和密码放入map
-map<string, string> user_table;
-locker m_lock;
+map<string, string> http_conn::user_table;
+locker http_conn::m_lock=locker();
 
 // 初始化静态成员变量
 int http_conn::m_user_count = 0;// 客户数量
 int http_conn::m_epollfd = -1;
-sql_conn_pool *http_conn::m_connPool = nullptr;
+sql_conn_pool *http_conn::m_connPool=nullptr;
+std::unique_ptr<SPHttp[]> http_conn::users=nullptr;
 
 // 初始化数据库数据到本地
-void http_conn::initmysql_table(sql_conn_pool *connPool)
+void http_conn::initmysql_table()
 {
-    // 初始化数据库连接池
-    m_connPool = connPool;
     // 取出一个mysql连接
     MYSQL *mysql = nullptr;
     // 通过RAII机制管理mysql的生存周期
-    connectionRAII mysqlcon(&mysql, connPool);
+    connectionRAII mysqlcon(&mysql, m_connPool);
 
     // 在user表中检索username，passwd数据，浏览器端输入
     if (mysql_query(mysql, "SELECT username,passwd FROM user"))
     {
         LOG_ERROR("MySQL SELECT error:%s", mysql_error(mysql));
     }
-    LOG_INFO("Get the MySQL list success!");
+    LOG_INFO("Get the MySQL table success!");
     // 从表中检索完整的结果集
     MYSQL_RES *result = mysql_store_result(mysql);
     // 结果集列数
@@ -98,34 +95,33 @@ void modfd(int epollfd, int fd, int ev) {
     epoll_ctl( epollfd, EPOLL_CTL_MOD, fd, &event );
 }
 
+/* 
+    关闭连接和释放连接对象的逻辑：
+    首先，判断该定时器是否被标记删除
+    1.被标记了：
+        (1)连接已经断开过了，且过了容忍时间，列队pop定时器，同时数组释放连接对象
+    2.未被标记：
+        (1)客户端正常超时被清理，断开连接，标记删除，并不马上删除，
+            给予2*TIMESHOT容忍时间，即定时器更新超时时间
+        (2)读写错误，错误信号，客户端主动关闭以及短连接请求数据读完了，
+            断开连接，标记删除，给予2*TIMERSHOT的容忍时间
+*/
+//释放连接对象，清理数组空间，同时定时器也同时被删除
+void http_conn::release_conn()
+{
+    LOG_INFO("Release client(%s) cfd(%d)connection and its timer......",inet_ntoa(m_address.sin_addr), m_sockfd);
+    if(users[m_sockfd])
+        users[m_sockfd].reset(); // 引用计数减为0，
+}
+// 断开连接+标记删除+更新容忍时间
+void http_conn::close_conn() 
+{
+    removefd(m_epollfd, m_sockfd);// 先断开连接
+    m_user_count--; // 关闭一个连接，将客户总数量-1
 
-// 关闭连接的逻辑：
-// 首先判断连接还在不在，把m_sockfd作为标记，断开连接时会被标记未-1
-// m_sockfd != -1 说明连接还在，都先关闭连接，再判断是不是真关闭，真关闭释放所有资源，假关闭不需要释放资源
-// m_sockfd == -1 说明连接断开了，直接释放资源，不需要再判断了
-void http_conn::close_conn(bool real_close) {
-
-    // 连接没断开
-    if(m_sockfd != -1)
-    {
-        // 先断开连接
-        removefd(m_epollfd, m_sockfd);
-        
-        m_user_count--; // 关闭一个连接，将客户总数量-1
-
-        // 如果是真删
-        if(real_close)
-        {
-            LOG_ERROR("Close client(%s) cfd(%d) connection and its timer......",inet_ntoa(m_address.sin_addr), m_sockfd);
-        }
-        m_sockfd = -1;
-    }
-    // 连接被断开过，说明之前是意外断开，直接删除资源，
-    else
-    {
-        LOG_ERROR("Close client(%s) cfd(%d) connection and its timer......",inet_ntoa(m_address.sin_addr), m_sockfd);
-    }
-    
+    // 统一标记删除，更新容忍时间2*TIMESHOT
+    timer.lock()->setdeleted();
+    timer.lock()->upadte(2 * TIMESLOT);
 }
 
 // 初始化连接,外部调用初始化套接字地址
@@ -744,7 +740,9 @@ void http_conn::process() {
     // 生成响应
     bool write_ret = process_write( read_ret );
     if ( !write_ret ) {
-        close_conn(false);
+        close_conn();
+        LOG_ERROR("Write error in client(%s) cfd(%d)", inet_ntoa(m_address.sin_addr),m_sockfd);
+
     }
     modfd( m_epollfd, m_sockfd, EPOLLOUT);
 }
