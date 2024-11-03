@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
     else if (log_flag==2)
     {   
         // 同步日志
-        Log::get_instance()->init("log_file/tbServerLog-1",log_flag, 2000, 800000, 0);
+        Log::get_instance()->init("log_file/TesttbServerLog",log_flag, 2000, 800000, 0);
         LOG_INFO("同步日志开启！");
         printf("同步日志开启！\n");
     }
