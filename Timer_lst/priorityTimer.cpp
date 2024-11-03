@@ -36,15 +36,7 @@ void timerQueue::tick() {
         // 临时的sharedptr在作用域外会自动销毁，引用计数先+1后-1
         SPTNode temp_timer = timer_queue.top(); 
         SPHttp temp_conn = temp_timer->user_data.lock();
-        /*
-            如果被标记了，说明连接已经断开，异常或者正常标记
-                超时了，删除定时器，释放连接资源
-                没超时，break；
-            如果没标记，说明连接没断
-                超时了，断开连接，标记删除，更新2倍的容忍时间
-                没超时，break；
-        
-        */
+
         if (!temp_timer->isVaild())
         {
             // 如果未被标记，断开连接，标记删除，更新为容忍时间，期间不删除定时器和连接信息

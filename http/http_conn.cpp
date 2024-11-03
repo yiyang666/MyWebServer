@@ -15,7 +15,7 @@ const char* error_500_form = "There was an unusual problem serving the requested
 const char* doc_root = "/home/young/workspace/c++_work/webserver_all/MyWeb/myroot";
 
 //将表中的用户名和密码放入map
-map<string, string> http_conn::user_table;
+map<string, string> http_conn::user_table={};
 locker http_conn::m_lock=locker();
 
 // 初始化静态成员变量
@@ -26,10 +26,12 @@ std::unique_ptr<SPHttp[]> http_conn::users=nullptr;
 
 // 初始化数据库数据到本地
 void http_conn::initmysql_table()
+void http_conn::initmysql_table()
 {
     // 取出一个mysql连接
     MYSQL *mysql = nullptr;
     // 通过RAII机制管理mysql的生存周期
+    connectionRAII mysqlcon(&mysql, m_connPool);
     connectionRAII mysqlcon(&mysql, m_connPool);
 
     // 在user表中检索username，passwd数据，浏览器端输入
@@ -110,6 +112,7 @@ void modfd(int epollfd, int fd, int ev) {
 void http_conn::release_conn()
 {
     LOG_INFO("Release client(%s) cfd(%d)connection and its timer......",inet_ntoa(m_address.sin_addr), m_sockfd);
+    
     if(users[m_sockfd])
         users[m_sockfd].reset(); // 引用计数减为0，
 }
@@ -122,6 +125,7 @@ void http_conn::close_conn()
     // 统一标记删除，更新容忍时间2*TIMESHOT
     timer.lock()->setdeleted();
     timer.lock()->upadte(2 * TIMESLOT);
+
 }
 
 // 初始化连接,外部调用初始化套接字地址
