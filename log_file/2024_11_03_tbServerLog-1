@@ -1,0 +1,781 @@
+2024-11-03 15:32:24.174411 [info]: 同步日志开启！
+2024-11-03 15:32:24.198178 [info]: Get the MySQL list success!
+2024-11-03 15:32:29.198742 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:32:54.122818 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:32:59.272001 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:32:59.272077 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:32:59.272114 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:32:59.272175 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 15:32:59.272194 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:32:59.272202 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:32:59.272209 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:32:59.272218 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:32:59.272253 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:32:59.272263 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:32:59.272270 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:32:59.272277 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:32:59.272283 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:32:59.272288 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:32:59.272294 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:32:59.272299 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:32:59.272304 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:32:59.272309 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:32:59.272314 [info]: got 1 http line:
+2024-11-03 15:32:59.272525 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:33:04.272420 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:33:09.273109 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:33:14.273694 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:34:45.603013 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:34:57.878179 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:34:57.878351 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 15:36:14.525461 [info]: Normally close to client(192.168.159.1) cfd(17)
+2024-11-03 15:36:29.562797 [info]: Release client(192.168.159.1) cfd(17)connection and its timer......
+2024-11-03 15:38:57.130700 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:39:02.130980 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:39:07.131419 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:39:12.131727 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:40:04.074320 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:40:12.966712 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:40:12.966782 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:40:12.966807 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:40:12.966842 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 15:40:12.966876 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:40:12.966884 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:40:12.966900 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:40:12.966905 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:40:12.966910 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:40:12.966915 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:40:12.966920 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:40:12.966926 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:40:12.966931 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:40:12.966935 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:40:12.966940 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:40:12.966945 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:40:12.966949 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:40:12.966954 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:40:12.966959 [info]: got 1 http line:
+2024-11-03 15:41:32.216037 [info]: 同步日志开启！
+2024-11-03 15:41:32.238456 [info]: Get the MySQL list success!
+2024-11-03 15:41:37.238684 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:41:37.454729 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:41:37.454862 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:41:37.456686 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:41:37.456825 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 15:41:37.456870 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:41:37.456879 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:41:37.456883 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:41:37.456887 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:41:37.456891 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:41:37.456894 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:41:37.456898 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:41:37.456902 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:41:37.456906 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:41:37.456909 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:41:37.456912 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:41:37.456916 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:41:37.456919 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:41:37.456923 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:41:37.456926 [info]: got 1 http line:
+2024-11-03 15:41:37.457090 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:41:42.238874 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:41:47.239105 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:41:52.239397 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:41:57.239590 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:41:57.239893 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:41:57.305363 [info]: Reconnecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:41:57.307973 [info]: Deal with the client(192.168.159.1) cfd(17)
+2024-11-03 15:41:57.308097 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 15:41:57.308141 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:41:57.308151 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:41:57.308157 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:41:57.308162 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:41:57.308168 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:41:57.308173 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:41:57.308178 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:41:57.308185 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:41:57.308190 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:41:57.308195 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:41:57.308200 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:41:57.308205 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:41:57.308254 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:41:57.308269 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:41:57.308275 [info]: got 1 http line:
+2024-11-03 15:41:57.308455 [info]: Send data to client(192.168.159.1) cfd(17)
+2024-11-03 15:42:02.240095 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:07.240553 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:12.240893 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:17.241124 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:17.241695 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:42:19.340874 [info]: Reconnecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:42:19.340955 [info]: Deal with the client(192.168.159.1) cfd(17)
+2024-11-03 15:42:19.341052 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 15:42:19.341072 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:42:19.341078 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:42:19.341084 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:42:19.341089 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:42:19.341094 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:42:19.341099 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:42:19.341104 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:42:19.341108 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:42:19.341113 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:42:19.341125 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:42:19.341130 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:42:19.341134 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:42:19.341138 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:42:19.341142 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:42:19.341146 [info]: got 1 http line:
+2024-11-03 15:42:19.341365 [info]: Send data to client(192.168.159.1) cfd(17)
+2024-11-03 15:42:22.242022 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:27.242387 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:32.242595 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:37.242809 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:37.243514 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:42:40.679408 [info]: Reconnecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:42:40.680044 [info]: Deal with the client(192.168.159.1) cfd(17)
+2024-11-03 15:42:40.680150 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 15:42:40.680187 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:42:40.680195 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:42:40.680201 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:42:40.680206 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:42:40.680268 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:42:40.680275 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:42:40.680292 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:42:40.680297 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:42:40.680302 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:42:40.680306 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:42:40.680310 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:42:40.680313 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:42:40.680317 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:42:40.680321 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:42:40.680325 [info]: got 1 http line:
+2024-11-03 15:42:40.680592 [info]: Send data to client(192.168.159.1) cfd(17)
+2024-11-03 15:42:42.243865 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:47.244226 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:52.244561 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:57.244781 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:42:57.245381 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:43:02.245581 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:43:07.245799 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:43:07.245898 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 15:43:07.246404 [info]: Normally close to client(192.168.159.1) cfd(17)
+2024-11-03 15:43:12.246651 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:43:17.246905 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:43:17.247017 [info]: Release client(192.168.159.1) cfd(17)connection and its timer......
+2024-11-03 15:43:22.247156 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:43:27.247499 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:43:29.371681 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:43:29.371768 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:43:29.372701 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:43:29.372814 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 15:43:29.372850 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:43:29.372857 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:43:29.372862 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:43:29.372865 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:43:29.372869 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:43:29.372873 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:43:29.372876 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:43:29.372880 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:43:29.372884 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:43:29.372887 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:43:29.372891 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:43:29.372894 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:43:29.372898 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:43:29.372901 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:43:29.372905 [info]: got 1 http line:
+2024-11-03 15:43:29.373044 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:43:32.247754 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:43:37.248586 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:43:38.529681 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:43:38.529819 [info]: got 1 http line:POST /1 HTTP/1.1
+2024-11-03 15:43:38.529840 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:43:38.529846 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:43:38.529852 [info]: got 1 http line:Content-Length: 0
+2024-11-03 15:43:38.529859 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:43:38.529864 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:43:38.529869 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 15:43:38.529874 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 15:43:38.529879 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:43:38.529884 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:43:38.529888 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:43:38.529894 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:43:38.529899 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:43:38.529911 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:43:38.529915 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:43:38.529918 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:43:38.529921 [info]: got 1 http line:Referer: http://192.168.159.128:9999/
+2024-11-03 15:43:38.529924 [info]: oop! unknow header Referer: http://192.168.159.128:9999/
+2024-11-03 15:43:38.529927 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:43:38.529931 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:43:38.529934 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:43:38.529937 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:43:38.529940 [info]: got 1 http line:
+2024-11-03 15:43:38.530135 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:43:42.248798 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:43:45.205307 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:43:45.205455 [info]: got 1 http line:POST /2CGISQL.cgi HTTP/1.1
+2024-11-03 15:43:45.205489 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:43:45.205498 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:43:45.205504 [info]: got 1 http line:Content-Length: 23
+2024-11-03 15:43:45.205510 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:43:45.205516 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:43:45.205521 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 15:43:45.205527 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 15:43:45.205533 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:43:45.205538 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:43:45.205544 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:43:45.205549 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:43:45.205554 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:43:45.205560 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:43:45.205566 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:43:45.205571 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:43:45.205576 [info]: got 1 http line:Referer: http://192.168.159.128:9999/1
+2024-11-03 15:43:45.205580 [info]: oop! unknow header Referer: http://192.168.159.128:9999/1
+2024-11-03 15:43:45.205585 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:43:45.205590 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:43:45.205595 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:43:45.205600 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:43:45.205605 [info]: got 1 http line:
+2024-11-03 15:43:45.205609 [info]: got 1 http line:user=root&password=root
+2024-11-03 15:43:45.205629 [info]: User login successful
+2024-11-03 15:43:45.205852 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:43:47.249112 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:43:52.249439 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:43:57.249810 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:02.250406 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:02.250513 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 15:44:02.250691 [info]: Release client(192.168.159.1) cfd(17)connection and its timer......
+2024-11-03 15:44:07.250847 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:12.251351 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:17.251633 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:22.251866 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:27.252134 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:32.252336 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:37.252555 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:42.252830 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:47.253937 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:52.254166 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:44:57.254589 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:45:02.254899 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:48:34.450946 [info]: 同步日志开启！
+2024-11-03 15:48:34.472416 [info]: Get the MySQL list success!
+2024-11-03 15:48:39.472603 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:48:44.472717 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:48:46.105328 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:48:46.105428 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:48:46.105447 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:48:46.105568 [info]: got 1 http line:POST /2CGISQL.cgi HTTP/1.1
+2024-11-03 15:48:46.105626 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:48:46.105639 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:48:46.105647 [info]: got 1 http line:Content-Length: 23
+2024-11-03 15:48:46.105655 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:48:46.105694 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:48:46.105705 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:48:46.105709 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:48:46.105713 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:48:46.105718 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:48:46.105722 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 15:48:46.105726 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 15:48:46.105730 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:48:46.105733 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:48:46.105737 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:48:46.105741 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:48:46.105753 [info]: got 1 http line:Referer: http://192.168.159.128:9999/1
+2024-11-03 15:48:46.105757 [info]: oop! unknow header Referer: http://192.168.159.128:9999/1
+2024-11-03 15:48:46.105761 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:48:46.105764 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:48:46.105767 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:48:46.105771 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:48:46.105774 [info]: got 1 http line:
+2024-11-03 15:48:46.105778 [info]: got 1 http line:user=root&password=root
+2024-11-03 15:48:46.105789 [info]: User login successful
+2024-11-03 15:48:46.105995 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:48:49.472854 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:48:54.473162 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:48:59.473418 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:49:04.473752 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:49:04.474311 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:49:09.474610 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:49:14.474948 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:49:14.475061 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 15:49:14.475510 [info]: Normally close to client(192.168.159.1) cfd(17)
+2024-11-03 15:49:19.475680 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:24.475893 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:24.476017 [info]: Release client(192.168.159.1) cfd(17)connection and its timer......
+2024-11-03 15:49:29.476304 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:34.477147 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:39.477630 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:44.477873 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:49.478175 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:54.478527 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:49:59.478704 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:04.478972 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:09.479216 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:14.479540 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:19.479896 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:24.480167 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:29.480766 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:34.481080 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:39.481639 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:44.481901 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:49.482172 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:54.482497 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:50:59.482727 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:51:04.482889 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:51:09.483152 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:51:14.484232 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:51:19.484620 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:51:24.484925 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:51:29.485189 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:51:31.813893 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:51:31.813959 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:51:31.816838 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:51:31.816978 [info]: got 1 http line:POST /5 HTTP/1.1
+2024-11-03 15:51:31.816998 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:51:31.817003 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:51:31.817007 [info]: got 1 http line:Content-Length: 0
+2024-11-03 15:51:31.817011 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:51:31.817014 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:51:31.817018 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 15:51:31.817022 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 15:51:31.817025 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:51:31.817029 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:51:31.817032 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:51:31.817036 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:51:31.817039 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:51:31.817043 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:51:31.817047 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:51:31.817050 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:51:31.817054 [info]: got 1 http line:Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 15:51:31.817057 [info]: oop! unknow header Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 15:51:31.817060 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:51:31.817064 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:51:31.817067 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:51:31.817071 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:51:31.817074 [info]: got 1 http line:
+2024-11-03 15:51:31.817271 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:51:31.871011 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:51:31.871184 [info]: got 1 http line:GET /xxx.jpg HTTP/1.1
+2024-11-03 15:51:31.871214 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:51:31.871222 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:51:31.871228 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:51:31.871268 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:51:31.871275 [info]: got 1 http line:Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 15:51:31.871281 [info]: oop! unknow header Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 15:51:31.871296 [info]: got 1 http line:Referer: http://192.168.159.128:9999/5
+2024-11-03 15:51:31.871302 [info]: oop! unknow header Referer: http://192.168.159.128:9999/5
+2024-11-03 15:51:31.871306 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:51:31.871311 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:51:31.871316 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:51:31.871321 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:51:31.871326 [info]: got 1 http line:
+2024-11-03 15:51:31.877990 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:51:31.972556 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:51:34.485437 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:51:39.485641 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:51:44.487822 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:51:49.488133 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:51:49.488866 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:51:54.489171 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:51:59.489417 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:51:59.489538 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 15:51:59.489874 [info]: Normally close to client(192.168.159.1) cfd(17)
+2024-11-03 15:52:04.490340 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:09.490582 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:09.490699 [info]: Release client(192.168.159.1) cfd(17)connection and its timer......
+2024-11-03 15:52:14.490839 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:19.491214 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:24.491640 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:29.491837 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:34.492154 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:39.493453 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:44.493707 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:49.494454 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:54.494888 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:52:54.611355 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:52:54.611420 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:52:54.612643 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.612754 [info]: got 1 http line:POST /5 HTTP/1.1
+2024-11-03 15:52:54.612801 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:52:54.612810 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:52:54.612815 [info]: got 1 http line:Content-Length: 0
+2024-11-03 15:52:54.612821 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:52:54.612826 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:52:54.612831 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:52:54.612835 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:52:54.612840 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:52:54.612846 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:52:54.612859 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 15:52:54.612863 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 15:52:54.612868 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:52:54.612872 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:52:54.612877 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:52:54.612882 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:52:54.612886 [info]: got 1 http line:Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 15:52:54.612890 [info]: oop! unknow header Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 15:52:54.612895 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:52:54.612899 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:52:54.612904 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:52:54.612908 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:52:54.612913 [info]: got 1 http line:
+2024-11-03 15:52:54.613075 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.664782 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.664955 [info]: got 1 http line:GET /xxx.jpg HTTP/1.1
+2024-11-03 15:52:54.665043 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:52:54.665064 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:52:54.665072 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:52:54.665077 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:52:54.665084 [info]: got 1 http line:Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 15:52:54.665089 [info]: oop! unknow header Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 15:52:54.665095 [info]: got 1 http line:Referer: http://192.168.159.128:9999/5
+2024-11-03 15:52:54.665100 [info]: oop! unknow header Referer: http://192.168.159.128:9999/5
+2024-11-03 15:52:54.665105 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:52:54.665109 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:52:54.665114 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:52:54.665119 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:52:54.665123 [info]: got 1 http line:
+2024-11-03 15:52:54.669130 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.690283 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.704128 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.715200 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.723877 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.731750 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:54.737960 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:52:59.495206 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:04.495682 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:09.495902 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:14.496184 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:14.496898 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:53:19.497124 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:53:24.497600 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:53:24.497746 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 15:53:24.497907 [info]: Normally close to client(192.168.159.1) cfd(17)
+2024-11-03 15:53:24.832951 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 15:53:24.833017 [info]: Reconnecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 15:53:24.834360 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:53:24.834516 [info]: got 1 http line:POST /5 HTTP/1.1
+2024-11-03 15:53:24.834578 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:53:24.834593 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:53:24.834599 [info]: got 1 http line:Content-Length: 0
+2024-11-03 15:53:24.834604 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 15:53:24.834608 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 15:53:24.834612 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 15:53:24.834616 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 15:53:24.834620 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:53:24.834625 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:53:24.834628 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 15:53:24.834632 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 15:53:24.834636 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:53:24.834640 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 15:53:24.834644 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:53:24.834648 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 15:53:24.834652 [info]: got 1 http line:Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 15:53:24.834656 [info]: oop! unknow header Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 15:53:24.834659 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:53:24.834663 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:53:24.834667 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:53:24.834671 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:53:24.834675 [info]: got 1 http line:
+2024-11-03 15:53:24.834823 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:53:24.877788 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 15:53:24.877926 [info]: got 1 http line:GET /xxx.jpg HTTP/1.1
+2024-11-03 15:53:24.877946 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 15:53:24.877951 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 15:53:24.877957 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:53:24.877963 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 15:53:24.877968 [info]: got 1 http line:Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 15:53:24.877983 [info]: oop! unknow header Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 15:53:24.877988 [info]: got 1 http line:Referer: http://192.168.159.128:9999/5
+2024-11-03 15:53:24.877992 [info]: oop! unknow header Referer: http://192.168.159.128:9999/5
+2024-11-03 15:53:24.877997 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 15:53:24.878002 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 15:53:24.878007 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:53:24.878012 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 15:53:24.878016 [info]: got 1 http line:
+2024-11-03 15:53:24.878738 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:53:24.896300 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:53:24.909869 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:53:24.923205 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 15:53:29.498101 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:34.498369 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:39.498614 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:44.498821 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 15:53:44.499035 [info]: Normally close to client(192.168.159.1) cfd(17)
+2024-11-03 15:53:49.499345 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:53:54.499688 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 15:53:54.499788 [info]: Release client(192.168.159.1) cfd(17)connection and its timer......
+2024-11-03 15:53:54.500061 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 15:53:59.500333 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:54:04.500594 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:54:04.500713 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 15:54:09.500837 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:54:14.501063 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:54:19.501325 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:54:24.501645 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:54:29.501930 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 15:54:34.502183 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:00:02.508460 [info]: 同步日志开启！
+2024-11-03 16:00:02.529862 [info]: Get the MySQL list success!
+2024-11-03 16:00:07.163728 [info]: Connecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 16:00:07.163812 [info]: Connecting to a new client(192.168.159.1) cfd(17) 
+2024-11-03 16:00:07.163826 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 16:00:07.163917 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 16:00:07.163970 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:00:07.163982 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:00:07.163987 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:07.163994 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:07.164000 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:07.164007 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:07.164013 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:07.164028 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:07.164033 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:00:07.164037 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:00:07.164042 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:07.164047 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:07.164052 [info]: got 1 http line:
+2024-11-03 16:00:07.164288 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 16:00:07.530100 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:08.901852 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 16:00:08.902021 [info]: got 1 http line:POST /1 HTTP/1.1
+2024-11-03 16:00:08.902066 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:00:08.902076 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:00:08.902081 [info]: got 1 http line:Content-Length: 0
+2024-11-03 16:00:08.902087 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 16:00:08.902091 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 16:00:08.902096 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 16:00:08.902100 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 16:00:08.902104 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:08.902109 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:08.902113 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:08.902118 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:08.902122 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:08.902127 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:08.902131 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:08.902135 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:08.902140 [info]: got 1 http line:Referer: http://192.168.159.128:9999/
+2024-11-03 16:00:08.902144 [info]: oop! unknow header Referer: http://192.168.159.128:9999/
+2024-11-03 16:00:08.902148 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:00:08.902152 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:00:08.902157 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:08.902161 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:08.902165 [info]: got 1 http line:
+2024-11-03 16:00:08.902398 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 16:00:11.472649 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 16:00:11.472803 [info]: got 1 http line:POST /2CGISQL.cgi HTTP/1.1
+2024-11-03 16:00:11.472824 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:00:11.472830 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:00:11.472836 [info]: got 1 http line:Content-Length: 23
+2024-11-03 16:00:11.472843 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 16:00:11.472848 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 16:00:11.472860 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 16:00:11.472864 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 16:00:11.472867 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:11.472870 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:11.472874 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:11.472877 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:11.472880 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:11.472883 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:11.472887 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:11.472890 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:11.472893 [info]: got 1 http line:Referer: http://192.168.159.128:9999/1
+2024-11-03 16:00:11.472896 [info]: oop! unknow header Referer: http://192.168.159.128:9999/1
+2024-11-03 16:00:11.472899 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:00:11.472902 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:00:11.472905 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:11.472908 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:11.472912 [info]: got 1 http line:
+2024-11-03 16:00:11.472915 [info]: got 1 http line:user=root&password=root
+2024-11-03 16:00:11.472926 [info]: User login successful
+2024-11-03 16:00:11.473127 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 16:00:12.530305 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:17.530522 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:21.289266 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 16:00:21.289410 [info]: got 1 http line:GET / HTTP/1.1
+2024-11-03 16:00:21.289466 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:00:21.289478 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:00:21.289484 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:21.289489 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:21.289495 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:21.289501 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:21.289506 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:21.289511 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:21.289516 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:00:21.289522 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:00:21.289527 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:21.289533 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:21.289538 [info]: got 1 http line:
+2024-11-03 16:00:21.289731 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 16:00:22.530948 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:24.397236 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 16:00:24.397474 [info]: got 1 http line:POST /0 HTTP/1.1
+2024-11-03 16:00:24.397525 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:00:24.397536 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:00:24.397542 [info]: got 1 http line:Content-Length: 0
+2024-11-03 16:00:24.397547 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 16:00:24.397551 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 16:00:24.397556 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 16:00:24.397560 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 16:00:24.397564 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:24.397568 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:24.397572 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:24.397576 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:24.397580 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:24.397585 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:24.397589 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:24.397593 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:24.397597 [info]: got 1 http line:Referer: http://192.168.159.128:9999/
+2024-11-03 16:00:24.397601 [info]: oop! unknow header Referer: http://192.168.159.128:9999/
+2024-11-03 16:00:24.397605 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:00:24.397609 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:00:24.397613 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:24.397617 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:24.397621 [info]: got 1 http line:
+2024-11-03 16:00:24.397812 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 16:00:27.531299 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:32.531482 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:36.733057 [info]: Deal with the client(192.168.159.1) cfd(16)
+2024-11-03 16:00:36.733186 [info]: got 1 http line:POST /3CGISQL.cgi HTTP/1.1
+2024-11-03 16:00:36.733302 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:00:36.733327 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:00:36.733334 [info]: got 1 http line:Content-Length: 23
+2024-11-03 16:00:36.733342 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 16:00:36.733347 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 16:00:36.733353 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 16:00:36.733359 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 16:00:36.733364 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:36.733370 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:36.733375 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:36.733380 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:36.733385 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:36.733401 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:36.733406 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:36.733411 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:36.733416 [info]: got 1 http line:Referer: http://192.168.159.128:9999/0
+2024-11-03 16:00:36.733421 [info]: oop! unknow header Referer: http://192.168.159.128:9999/0
+2024-11-03 16:00:36.733426 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:00:36.733430 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:00:36.733435 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:36.733440 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:36.733443 [info]: got 1 http line:
+2024-11-03 16:00:36.733447 [info]: got 1 http line:user=yy&password=123456
+2024-11-03 16:00:36.733639 [info]: Send data to client(192.168.159.1) cfd(16)
+2024-11-03 16:00:37.531720 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:42.531963 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:47.532214 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:52.532545 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:00:52.533109 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 16:00:56.782452 [info]: Reconnecting to a new client(192.168.159.1) cfd(16) 
+2024-11-03 16:00:56.785063 [info]: Deal with the client(192.168.159.1) cfd(17)
+2024-11-03 16:00:56.785286 [info]: got 1 http line:POST /3CGISQL.cgi HTTP/1.1
+2024-11-03 16:00:56.785338 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:00:56.785345 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:00:56.785349 [info]: got 1 http line:Content-Length: 21
+2024-11-03 16:00:56.785353 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 16:00:56.785356 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 16:00:56.785360 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 16:00:56.785364 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 16:00:56.785367 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:56.785371 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:00:56.785374 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:56.785378 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:00:56.785381 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:56.785448 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:00:56.785468 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:56.785472 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:00:56.785475 [info]: got 1 http line:Referer: http://192.168.159.128:9999/3CGISQL.cgi
+2024-11-03 16:00:56.785479 [info]: oop! unknow header Referer: http://192.168.159.128:9999/3CGISQL.cgi
+2024-11-03 16:00:56.785491 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:00:56.785495 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:00:56.785499 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:56.785502 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:00:56.785506 [info]: got 1 http line:
+2024-11-03 16:00:56.785509 [info]: got 1 http line:user=yyy&password=yyy
+2024-11-03 16:00:56.790830 [info]: User registration successful!
+2024-11-03 16:00:56.791088 [info]: Send data to client(192.168.159.1) cfd(17)
+2024-11-03 16:00:57.533764 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:01:02.534141 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:01:04.244279 [info]: Deal with the client(192.168.159.1) cfd(17)
+2024-11-03 16:01:04.244427 [info]: got 1 http line:POST /2CGISQL.cgi HTTP/1.1
+2024-11-03 16:01:04.244469 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:01:04.244476 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:01:04.244480 [info]: got 1 http line:Content-Length: 21
+2024-11-03 16:01:04.244484 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 16:01:04.244488 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 16:01:04.244491 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 16:01:04.244495 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 16:01:04.244499 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:01:04.244502 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:01:04.244506 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:01:04.244509 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:01:04.244513 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:01:04.244516 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:01:04.244520 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:01:04.244523 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:01:04.244527 [info]: got 1 http line:Referer: http://192.168.159.128:9999/3CGISQL.cgi
+2024-11-03 16:01:04.244530 [info]: oop! unknow header Referer: http://192.168.159.128:9999/3CGISQL.cgi
+2024-11-03 16:01:04.244534 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:01:04.244537 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:01:04.244541 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:01:04.244544 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:01:04.244548 [info]: got 1 http line:
+2024-11-03 16:01:04.244551 [info]: got 1 http line:user=yyy&password=yyy
+2024-11-03 16:01:04.244559 [info]: User login successful
+2024-11-03 16:01:04.244728 [info]: Send data to client(192.168.159.1) cfd(17)
+2024-11-03 16:01:07.534629 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:01:08.773959 [info]: Deal with the client(192.168.159.1) cfd(17)
+2024-11-03 16:01:08.774052 [info]: got 1 http line:POST /7 HTTP/1.1
+2024-11-03 16:01:08.774070 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:01:08.774075 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:01:08.774088 [info]: got 1 http line:Content-Length: 0
+2024-11-03 16:01:08.774093 [info]: got 1 http line:Cache-Control: max-age=0
+2024-11-03 16:01:08.774096 [info]: oop! unknow header Cache-Control: max-age=0
+2024-11-03 16:01:08.774099 [info]: got 1 http line:Origin: http://192.168.159.128:9999
+2024-11-03 16:01:08.774102 [info]: oop! unknow header Origin: http://192.168.159.128:9999
+2024-11-03 16:01:08.774106 [info]: got 1 http line:Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:01:08.774109 [info]: oop! unknow header Content-Type: application/x-www-form-urlencoded
+2024-11-03 16:01:08.774112 [info]: got 1 http line:Upgrade-Insecure-Requests: 1
+2024-11-03 16:01:08.774115 [info]: oop! unknow header Upgrade-Insecure-Requests: 1
+2024-11-03 16:01:08.774118 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:01:08.774122 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:01:08.774125 [info]: got 1 http line:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:01:08.774128 [info]: oop! unknow header Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+2024-11-03 16:01:08.774131 [info]: got 1 http line:Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 16:01:08.774135 [info]: oop! unknow header Referer: http://192.168.159.128:9999/2CGISQL.cgi
+2024-11-03 16:01:08.774138 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:01:08.774141 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:01:08.774144 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:01:08.774147 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:01:08.774150 [info]: got 1 http line:
+2024-11-03 16:01:08.774539 [info]: Send data to client(192.168.159.1) cfd(17)
+2024-11-03 16:01:08.817459 [info]: Deal with the client(192.168.159.1) cfd(17)
+2024-11-03 16:01:08.817888 [info]: got 1 http line:GET /test1.jpg HTTP/1.1
+2024-11-03 16:01:08.817948 [info]: got 1 http line:Host: 192.168.159.128:9999
+2024-11-03 16:01:08.817962 [info]: got 1 http line:Connection: keep-alive
+2024-11-03 16:01:08.817968 [info]: got 1 http line:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:01:08.817972 [info]: oop! unknow header User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
+2024-11-03 16:01:08.818106 [info]: got 1 http line:Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 16:01:08.818123 [info]: oop! unknow header Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+2024-11-03 16:01:08.818129 [info]: got 1 http line:Referer: http://192.168.159.128:9999/7
+2024-11-03 16:01:08.818135 [info]: oop! unknow header Referer: http://192.168.159.128:9999/7
+2024-11-03 16:01:08.818140 [info]: got 1 http line:Accept-Encoding: gzip, deflate
+2024-11-03 16:01:08.818145 [info]: oop! unknow header Accept-Encoding: gzip, deflate
+2024-11-03 16:01:08.818150 [info]: got 1 http line:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:01:08.818158 [info]: oop! unknow header Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,fr-FR;q=0.5,fr;q=0.4
+2024-11-03 16:01:08.818162 [info]: got 1 http line:
+2024-11-03 16:01:08.822488 [info]: Send data to client(192.168.159.1) cfd(17)
+2024-11-03 16:01:12.534898 [info]: The timer tick is working ..., current client numbers are 2 
+2024-11-03 16:01:12.535605 [info]: Normally close to client(192.168.159.1) cfd(16)
+2024-11-03 16:01:17.535765 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 16:01:22.535872 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 16:01:22.535925 [info]: Release client(192.168.159.1) cfd(16)connection and its timer......
+2024-11-03 16:01:27.536196 [info]: The timer tick is working ..., current client numbers are 1 
+2024-11-03 16:01:27.536409 [info]: Normally close to client(192.168.159.1) cfd(17)
+2024-11-03 16:01:32.536727 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:01:37.536963 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:01:37.537096 [info]: Release client(192.168.159.1) cfd(17)connection and its timer......
+2024-11-03 16:01:42.537223 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:01:47.537529 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:01:52.537710 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:01:57.537925 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:02:02.538401 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:02:07.538647 [info]: The timer tick is working ..., current client numbers are 0 
+2024-11-03 16:02:12.538978 [info]: The timer tick is working ..., current client numbers are 0 
