@@ -9,6 +9,7 @@
 #include <signal.h>
 #include <errno.h>
 #include <iostream>
+#include <memory>
 
 #include "./lock/locker.h"
 #include "./http/http_conn.h"
@@ -17,11 +18,9 @@
 #include "./MySQL/sql_conn_pool.h"
 #include "./logs/log.h"
 
+
 #define MAX_FD 65535 // 最大的文件描述符个数
 #define MAX_EVENT_NUMBER 15000 // 监听的最大的事件数量
-#define TIMESLOT 5  //时间间隔，每次请求延长超时间为此间隔的三倍
-
-using SPHttp = std::shared_ptr<http_conn>; //给管理连接类的sharedptr起别名
 
 // 添加文件描述符到epoll中
 extern void addfd(int epollfd,int fd,bool one_shot);
@@ -64,9 +63,9 @@ void addsig(int sig  ,void(handler)(int))
 void timer_handler()
 {
     LOG_INFO("%s, current client numbers are %d ", "The timer tick is working ...",http_conn::m_user_count);
-    //printf("The timer_handler is working ..., current client numbers are %d \n",http_conn::m_user_count);
-    // 定时处理任务，实际上就是调用tick()函数，心搏函数
-    timer_queue.tick();
+    // printf("The timer_handler is working ..., current client numbers are %d \n",http_conn::m_user_count);
+
+    timer_queue.tick();// 调用定时器的tick()函数，心搏函数
     alarm(TIMESLOT); // 重新发定时信号
 }
 
@@ -96,7 +95,7 @@ int main(int argc, char *argv[])
     else if (log_flag==2)
     {   
         // 同步日志
-        Log::get_instance()->init("log_file/newtbTestServerLog-1",log_flag, 2000, 800000, 0);
+        Log::get_instance()->init("log_file/tbServerLog-1",log_flag, 2000, 800000, 0);
         LOG_INFO("同步日志开启！");
         printf("同步日志开启！\n");
     }
@@ -118,6 +117,8 @@ int main(int argc, char *argv[])
     // 创建数据库连接池
     sql_conn_pool *connPool = sql_conn_pool::GetInstance();
     connPool->init("localhost", "young", "123456", "WebServer", 3366, 8);
+    // 作为静态变量给连接类初始化
+    http_conn::m_connPool = connPool;
 
     //创建线程池，初始化线程池
     threadpool<http_conn> *pool=nullptr;
@@ -126,16 +127,17 @@ int main(int argc, char *argv[])
     }catch(...){
         exit(-1);
     }
-
     
-    //http_conn *users=new http_conn[MAX_FD];
-    // std::vector<http_conn> users;
+    //http_conn *users=new http_conn[MAX_FD];// 静态数组法
+    // std::vector<http_conn> users;// vector版本
     // users.reserve(MAX_FD);
-    // 创建一个智能指针数组来管理每一个连接对象
-    SPHttp users[MAX_FD]; //初始化，每个指针都指向空
+    // 创建一个week智能指针数组来管理每一个连接对象
+    //SPHttp users[MAX_FD]; //并没有初始化，指针指向空
+    // 智能指针数组和一个指向该数组的unique指针
+    http_conn::users = std::make_unique<SPHttp[]>(MAX_FD);
 
-    //  初始化数据库表
-    users[0]->initmysql_table(connPool);
+    //  初始化数据库静态表
+    http_conn::initmysql_table();
 
     // 创建监听套接字
     int listenfd= socket(PF_INET,SOCK_STREAM,0);
@@ -148,7 +150,7 @@ int main(int argc, char *argv[])
     int opt=1;
     setsockopt(listenfd,SOL_SOCKET,SO_REUSEPORT,&opt,sizeof(opt));
 
-    // 绑定服务器ip和端口
+    // 绑定
     struct sockaddr_in address;
     memset(&address,0,sizeof(address));
     address.sin_family=AF_INET;
@@ -216,33 +218,31 @@ int main(int argc, char *argv[])
                     continue;
                 }
                 /*
-                1.先判断智能指针管理的连接对象是否被销毁，
-                  1.1如果不存在：初始化一个连接对象，交给它管理。正式初始化，同时创建定时器。
-                  1.2如果存在：说明当前管理的这个对象已经被初始化了，此时只需要更新它的值
-                    2.再判断weekptr指向的定时器是否还在
-                     2.1 还在，说明这个定时器还未超时，只是当前连接被断开了，更新定时器的超时时间即可
-                     X2.2 不在了，不存在这种情况，因为超时要把定时器删除的同时（析构），把这个连接对象reset掉，防止继续占用内存空间
+                判断智能指针管理的对象是否被销毁，
+                    1.如果不存在：初始化一个连接对象，交给它管理。初始化，同时创建定时器。
+                    2.如果存在：说明当前管理的这个连接对象已经被初始化了，但是还没被释放，只需要更新它的值
                 */
-                if (users[connfd].get()==nullptr)
+                if (http_conn::users[connfd].get()==nullptr)
                 {
-                    // 让这个shared智能指针指向一个连接类的对象空间（腾出一块内存，把对象放进去，shared_ptr负责管理它）
+                    // 让这个shared智能指针指向一个连接类对象
                     // 强引用赋值给强引用，原来的自动销毁
-                    users[connfd] = std::make_shared<http_conn>(); 
+                    http_conn::users[connfd] = std::make_shared<http_conn>(); 
                     // 正式对成员初始化
-                    users[connfd]->init(connfd, client_address); 
+                    http_conn::users[connfd]->init(connfd, client_address); 
                     // 创建定时器,用sharedptr管理，再把这个sharedptr传出赋值给users中的弱定时器引用（weekptr）
                     SPTNode temp_timer=timer_queue.add_timer( 3 * TIMESLOT);
-                    users[connfd]->timer = temp_timer;
+                    http_conn::users[connfd]->timer = temp_timer;
                     // 再给定时器中的弱引用连接对象赋值，强引用赋值给弱引用
-                    temp_timer->user_data = users[connfd];
+                    temp_timer->user_data = http_conn::users[connfd];
                     // 打印日志
                     LOG_INFO("Connecting to a new client(%s) cfd(%d) ", inet_ntoa(client_address.sin_addr),connfd);
                 }
                 else
                 {
-                    users[connfd]->init(connfd, client_address);    // 重新初始化该连接对象
-                    users[connfd]->timer.lock()->upadte(3*TIMESLOT); // 更新该连接对象的定时器
-                    LOG_INFO("Reconnecting to a new client(%s) cfd(%d) ", inet_ntoa(client_address.sin_addr),connfd);
+                    http_conn::users[connfd]->init(connfd, client_address);    // 重新初始化该连接对象
+                    http_conn::users[connfd]->timer.lock()->upadte(3*TIMESLOT); // 更新该连接对象的定时器
+                    http_conn::users[connfd]->timer.lock()->cancelDeleted(); // 重新连接就取消删除标记
+                    LOG_INFO("Reconnecting to a new client(%s) cfd(%d) ", inet_ntoa(client_address.sin_addr), connfd);
                 }
             
             }
@@ -273,33 +273,30 @@ int main(int argc, char *argv[])
             //3. 处理错误信息事件，客户端关闭连接，移除对应的定时器
             else if(events[i].events & (EPOLLRDHUP|EPOLLHUP|EPOLLERR))
             {
+                LOG_ERROR("Eroor messages or FIN in client(%s) cfd(%d)", inet_ntoa(http_conn::users[curfd]->get_address()->sin_addr), curfd);
                 // 对方异常断开或者错误事件
-                users[curfd]->close_conn(false);
-                LOG_ERROR("Eroor messages or FIN in client(%s) cfd(%d)",inet_ntoa(users[curfd]->get_address()->sin_addr),curfd);
+                http_conn::users[curfd]->close_conn();
             }
             //4. 主线程处理客户端读事件
             else if(events[i].events & EPOLLIN)
             {
                 // 非阻塞IO，主线程一次性把所有数据都读完
                 // 从通信缓冲区读到该对象的读缓冲区内
-                if(users[curfd]->read())
+                if(http_conn::users[curfd]->read())
                 {
-                    // 打印日志
-                    LOG_INFO("Deal with the client(%s) cfd(%d)", inet_ntoa(users[curfd]->get_address()->sin_addr),curfd);
+                    LOG_INFO("Deal with the client(%s) cfd(%d)", inet_ntoa(http_conn::users[curfd]->get_address()->sin_addr),curfd);
                     // 有数据传输，更新该客户端的定时器
-                    users[curfd]->timer.lock()->upadte(3 * TIMESLOT);
-
+                    http_conn::users[curfd]->timer.lock()->upadte(3 * TIMESLOT);
                     // 线程池把这个已经读取到客户请求（get/post/...）的请求对象放入请求队列
                     // 交给工作线程去解析，工作线程解析请求后，把响应信息放到写缓冲区
-                    pool->append(users[curfd].get()); // 把原始指针传过去
+                    pool->append(http_conn::users[curfd].get()); // 把原始指针传过去
                 }
                 // 对方异常断开或者错误事件，和处理错误事件一样
                 else
                 {
-                    // 关闭掉这个curfd的事件监听，同时标记删除定时器
-                    users[curfd]->close_conn(false);
-                    // 打印日志，读数据出错
-                    LOG_ERROR("Read error in client(%s) cfd(%d)", inet_ntoa(users[curfd]->get_address()->sin_addr),curfd); 
+                    LOG_ERROR("Read error in client(%s) cfd(%d)", inet_ntoa(http_conn::users[curfd]->get_address()->sin_addr),curfd); 
+                    // 断开连接，关闭掉这个curfd的事件监听，同时标记删除定时器
+                    http_conn::users[curfd]->close_conn();
                 }
             }
             //5. 主线程处理客户端写事件
@@ -307,18 +304,19 @@ int main(int argc, char *argv[])
             {
                 // 非阻塞IO，主线程一次性写完所有数据，包括响应消息和html资源两部分
                 // 从对象的写缓冲区发送到通信缓冲区
-                if(users[curfd]->write())
+                if(http_conn::users[curfd]->write())
                 {
                     // 写事件日志
-                    LOG_INFO("Send data to client(%s) cfd(%d)",inet_ntoa(users[curfd]->get_address()->sin_addr), curfd);
+                    LOG_INFO("Send data to client(%s) cfd(%d)",inet_ntoa(http_conn::users[curfd]->get_address()->sin_addr), curfd);
                     //更新该客户端的定时器
-                    users[curfd]->timer.lock()->upadte( 3 * TIMESLOT);
+                    http_conn::users[curfd]->timer.lock()->upadte( 3 * TIMESLOT);
                 }
-                //如果发生写错误 或 对方已经关闭连接，则服务端也关闭连接，删除定时器
-                else{
-                    users[curfd]->close_conn(false);
-                    // 打印日志,写数据出错
-                    LOG_ERROR("Write error in client(%s) cfd(%d)", inet_ntoa(users[curfd]->get_address()->sin_addr),curfd);
+                //如果发生写错误 或 对方已经关闭连接，则服务端也关闭连接，标记删除定时器
+                else
+                {
+                    LOG_ERROR("Write error in client(%s) cfd(%d)", inet_ntoa(http_conn::users[curfd]->get_address()->sin_addr),curfd);
+                    http_conn::users[curfd]->close_conn();
+                    
                 }
             }
         }
@@ -326,7 +324,7 @@ int main(int argc, char *argv[])
         if(timeout){
             // 执行定时清理
             timer_handler();
-            timeout=false;
+            timeout = false;
         }
     }
     close(epfd);
