@@ -117,8 +117,11 @@ int main(int argc, char *argv[])
     // 创建数据库连接池
     sql_conn_pool *connPool = sql_conn_pool::GetInstance();
     connPool->init("localhost", "young", "123456", "WebServer", 3366, 8);
+    
     // 作为静态变量给连接类初始化
     http_conn::m_connPool = connPool;
+    // 初始化网站根目录
+    http_conn::doc_root = "/home/young/workspace/c++_work/webserver_all/MyWebServer/myroot/Web";
 
     //创建线程池，初始化线程池
     threadpool<http_conn> *pool=nullptr;

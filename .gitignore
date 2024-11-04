@@ -1,0 +1,10 @@
+# 忽略指定文件类型
+*.o
+*.a
+
+# 忽略文件夹
+bin/
+.vscode/
+log_file/
+./myroot/videos
+

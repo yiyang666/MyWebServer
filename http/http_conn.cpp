@@ -11,13 +11,11 @@ const char* error_404_form = "The requested file was not found on this server.\n
 const char* error_500_title = "Internal Error";
 const char* error_500_form = "There was an unusual problem serving the requested file.\n";
 
-// 网站的根目录
-const char* doc_root = "/home/young/workspace/c++_work/webserver_all/MyWebServer/myroot";
-
 // 初始化静态成员变量
 int http_conn::m_user_count = 0;
 int http_conn::m_epollfd = -1;
-sql_conn_pool *http_conn::m_connPool=nullptr;
+const char *http_conn::doc_root = {};
+sql_conn_pool *http_conn::m_connPool = nullptr;
 map<string, string> http_conn::user_table={};
 locker http_conn::m_lock=locker();
 std::unique_ptr<SPHttp[]> http_conn::users=nullptr;
