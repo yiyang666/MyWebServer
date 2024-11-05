@@ -7,4 +7,5 @@ bin/
 .vscode/
 log_file/
 ./myroot/videos
-
+server
+.gitignore
