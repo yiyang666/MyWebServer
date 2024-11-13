@@ -72,6 +72,8 @@ public:
     SPTNode add_timer(int ns);
     // 心搏函数,根据定时器超时时间，清理超时连接
     void tick();
+    // 更改定时器间隔，取最小超时时间+1秒为下一次定时触发时间，减少信号触发次数
+    int changeGap();
 
 private:
     // 使用优先队列实现定时器堆，入队自动调整，保持最小堆，出队也会自动调整，同时定时器sharedptr会把

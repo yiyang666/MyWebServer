@@ -19,10 +19,11 @@ C++，C++常用特性，Socket，Epoll，ThreadPool，MySQL
 * 服务器测试环境
 	* Ubuntu版本22.04
 	* MySQL版本8.0.39
+  * 四核CPU，8G内存
 * 相关依赖库
   * g++编译器  sudo apt-get install g++
   * make编译工具  sudo apt install make/cmake
-  * Mysql  sudo apt-get install mysql-server
+  * MySQL  sudo apt-get install mysql-server
   * C版本的mysql链接库
   ```bash
   yum install mysql-connector-c  # CentOS/Red Hat
@@ -42,7 +43,15 @@ C++，C++常用特性，Socket，Epoll，ThreadPool，MySQL
   INSERT INTO user(username, passwd) VALUES('name', 'passwd');
   ```
   * 编译+启动
-    ```C++
+    * 使用makefile文件构建
+    ```bash
+    make
+    ./server [port] [Log]
+    ```
+    * 使用CMakeLists文件构建
+    ```bash
+    mkdir build && cd build
+    camke .. 
     make
     ./server [port] [Log]
     ```

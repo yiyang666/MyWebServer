@@ -21,7 +21,7 @@ LIBS= -lmysqlclient -lpthread
 # 如果需要，指定库文件路径
 #LDFLAGS = -L/usr/local/mysql/lib  
 
-# 目标文件列表，处理中间产物，指定头文件生产.o文件
+# 目标文件列表，指定源文件列表中的全部.cpp文件产生.o文件
 OBJS = $(patsubst %.cpp,bin/%.o,$(SRCS))
 
 # 规则：如何编译，目标文件：依赖文件，如果依赖文件找不到，会去找它的生成规则
@@ -47,4 +47,4 @@ clean:
 	rm -rf bin $(TARGET)
 
 # 伪函数，用来执行一些操作，避免和文件重名，所以用伪函数声明
-.PHONY clean
+.PHONY: clean

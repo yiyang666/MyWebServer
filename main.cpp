@@ -66,7 +66,7 @@ void timer_handler()
     // printf("The timer_handler is working ..., current client numbers are %d \n",http_conn::m_user_count);
 
     timer_queue.tick();// 调用定时器的tick()函数，心搏函数
-    alarm(TIMESLOT); // 重新发定时信号
+    alarm(timer_queue.changeGap()); // 调整发送信号的时间
 }
 
 void show_error(int connfd, const char *info)
@@ -240,7 +240,7 @@ int main(int argc, char *argv[])
                 else
                 {
                     http_conn::users[connfd]->init(connfd, client_address);    // 重新初始化该连接对象
-                    http_conn::users[connfd]->timer.lock()->upadte(3*TIMESLOT); // 更新该连接对象的定时器
+                    http_conn::users[connfd]->timer.lock()->upadte(3 * TIMESLOT); // 更新该连接对象的定时器
                     http_conn::users[connfd]->timer.lock()->cancelDeleted(); // 重新连接就取消删除标记
                     LOG_INFO("Reconnecting to a new client(%s) cfd(%d) ", inet_ntoa(client_address.sin_addr), connfd);
                 }
@@ -314,9 +314,9 @@ int main(int argc, char *argv[])
                 //如果发生写错误 或 对方已经关闭连接，则服务端也关闭连接，标记删除定时器
                 else
                 {
-                    LOG_ERROR("Write error in client(%s) cfd(%d)", inet_ntoa(http_conn::users[curfd]->get_address()->sin_addr),curfd);
+                    // 短连接测试不建议打印此条日志
+                    //LOG_ERROR("Write error in client(%s) cfd(%d)", inet_ntoa(http_conn::users[curfd]->get_address()->sin_addr),curfd);
                     http_conn::users[curfd]->close_conn();
-                    
                 }
             }
         }

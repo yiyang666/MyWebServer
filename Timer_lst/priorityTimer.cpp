@@ -58,6 +58,19 @@ void timerQueue::tick() {
     }
 }
 
+int timerQueue::changeGap()
+{
+    if (!timer_queue.empty())
+    {
+        auto temp = timer_queue.top()->getExpire() - Clock::now();
+        // 间隔时间改为最小超时时间+1秒
+        return temp.count() / 1000000000 + 1;
+    }
+    else{
+        return 4 * TIMESLOT;// 无连接，间隔拉长
+    }
+}
+
 
 
 
