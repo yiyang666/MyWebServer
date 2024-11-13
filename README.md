@@ -19,7 +19,7 @@ C++，C++常用特性，Socket，Epoll，ThreadPool，MySQL
 * 服务器测试环境
 	* Ubuntu版本22.04
 	* MySQL版本8.0.39
-  * 四核CPU，8G内存
+  * 八核CPU，4G内存
 * 相关依赖库
   * g++编译器  sudo apt-get install g++
   * make编译工具  sudo apt install make/cmake
@@ -55,7 +55,7 @@ C++，C++常用特性，Socket，Epoll，ThreadPool，MySQL
     make
     ./server [port] [Log]
     ```
-    * port 随机指定[1024~655535]
+    * port 随机指定[1024~65535]
     * Log ：0/关闭 1/异步日志 2/同步日志
 
 参考的开源项目:
