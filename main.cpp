@@ -41,7 +41,7 @@ void sig_send( int sig )
     //为保证函数的可重入性，保留原来的errno
     int save_errno = errno;
     int msg = sig;
-    send( pipefd[1], ( char* )&msg, 1, 0 );
+    send(pipefd[1], (char *)&msg, 1, 0);
     errno = save_errno;
 }
 

@@ -5,6 +5,7 @@
 #include <deque>        // 用于双端队列
 #include <sys/time.h>   // 用于计时
 #include <assert.h>     // 断言
+#include <mutex>        // 用于互斥锁
 #include "../lock/locker.h"     // 之前定义的锁类
 
 // 模板类 BlockDeque，用于实现异步日志的阻塞队列
@@ -111,14 +112,18 @@ bool BlockDeque<T>::empty() {
 // 判断队列是否已满
 template<class T>
 bool BlockDeque<T>::full(){
-    m_mutex.lock(); // 使用锁保护队列数据
-    if(m_deq.size()>= m_capacity)
-    {
-        m_mutex.unlock();
-        return true;
-    }
-    m_mutex.unlock();
-    return false;         // 返回队列是否已满
+    //std::lock_guard<locker>(m_mutex);
+    // 利用lock_guard类管理互斥锁，作用域外会自动释放，代码更精简
+    std::lock_guard<locker> Lock(m_mutex);
+    return m_deq.size() >= m_capacity;
+    // m_mutex.lock(); // 使用锁保护队列数据
+    // if(m_deq.size()>= m_capacity)
+    // {
+    //     m_mutex.unlock();
+    //     return true;
+    // }
+    // m_mutex.unlock();
+    // return false;         // 返回队列是否已满
 }
 
 // 获取队列头部元素
@@ -191,11 +196,12 @@ void BlockDeque<T>::push(const T &item) {
 // 从队列头部移除元素
 template<class T>
 bool BlockDeque<T>::pop(T &item) {
-    m_mutex.lock();         // 使用独占锁保护队列数据
-    while(m_deq.empty()){                   // 如果队列为空
-        m_cond.wait(m_mutex.get());       // 消费者等待
-        if(isClose){                     // 如果队列已关闭
-            return false;                // 返回失败
+    // 这里可以用unique_lock配合条件变量使用
+    m_mutex.lock();                 // 使用独占锁保护队列数据
+    while(m_deq.empty()){           // 如果队列为空
+        m_cond.wait(m_mutex.get()); // 消费者等待
+        if(isClose){                // 如果队列已关闭
+            return false;           // 返回失败
         }
     }
     item = m_deq.front();             // 获取队列头部元素

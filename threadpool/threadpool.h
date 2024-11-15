@@ -6,6 +6,7 @@
 #include <exception>
 #include <pthread.h>
 #include "../lock/locker.h"
+#include"../logs/log.h"
 
 // 线程池类，将它定义为模板类是为了代码复用，模板参数T是任务类 
 // 使用模板的好处:
@@ -67,7 +68,6 @@ threadpool< T >::threadpool(int thread_number, int max_requests) :
 
     // 创建thread_number 个线程，并将他们设置为脱离线程。
     for ( int i = 0; i < thread_number; ++i ) {
-        printf( "create the %dth thread\n", i);
         if(pthread_create(m_threads + i, NULL, worker, this ) ) {
             delete [] m_threads;
             throw std::exception();
@@ -78,6 +78,8 @@ threadpool< T >::threadpool(int thread_number, int max_requests) :
             throw std::exception();
         }
     }
+    std::cout << "Successfully created threads: " << thread_number << std::endl;
+    LOG_INFO("Successfully created threads: %d", thread_number);
 }
 
 template< typename T >

@@ -40,13 +40,12 @@ void sql_conn_pool::init(string url,string User,string Passwd,string DBname,int 
             cout << "MySQL Connect error! " << endl;
             assert(con);
         }
-        //
-        cout << "create the Connect thread :" << i << endl;
-    
         // 更新连接池和空闲连接数量
         connList.push_back(con);
         ++FreeConn;
     }
+    cout << "Connection pool initialization successful! Numbers: "<<MaxConn<<endl;
+    LOG_INFO("Connection pool initialization successful! Numbers: %d",MaxConn);
     // 信号量初始化为最大连接次数
     reserve = sem(FreeConn);
     this->MaxConn = FreeConn;
