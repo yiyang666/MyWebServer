@@ -11,6 +11,9 @@ add_compile_options(-std=c++14 -Wall -O2)# -g
 # set(CMAKE_CXX_FLAGS_RELEASE "-O2") # 默认模式运行
 # set(CMAKE_CXX_STANDARD 14) # 指定CXX版本
 
+# set(CMAKE_EXPORT_COMPILE_COMMANDS ON)# 生成compile_commands.json文件配合clangd使用
+# set(CMAKE_BUILD_TYPE "Debug")# 设置编译模式方便使用scode的debugger
+
 # 额外的头文件目录，头文件分散在多个文件夹的情况
 include_directories(./lock ./threadpool)
 
